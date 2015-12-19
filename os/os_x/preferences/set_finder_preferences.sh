@@ -15,8 +15,8 @@ set_preferences() {
     execute 'defaults write com.apple.finder _FXShowPosixPathInTitle -bool true' \
         'Use full POSIX path as window title'
 
-    execute 'defaults write com.apple.finder DisableAllAnimations -bool true' \
-        'Disable all animations'
+    #todo execute 'defaults write com.apple.finder DisableAllAnimations -bool true' \
+    #    'Disable all animations'
 
     execute 'defaults write com.apple.finder WarnOnEmptyTrash -bool false' \
         'Disable the warning before emptying the Trash'
@@ -27,8 +27,8 @@ set_preferences() {
     execute 'defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false' \
         'Disable warning when changing a file extension'
 
-    execute 'defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"' \
-        'Use list view in all Finder windows by default'
+    #execute 'defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"' \
+    #    'Use list view in all Finder windows by default'
 
     execute 'defaults write com.apple.finder NewWindowTarget -string "PfDe" &&
              defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"' \
@@ -40,41 +40,41 @@ set_preferences() {
              defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true' \
         'Show icons for hard drives, servers, and removable media on the desktop'
 
-    execute 'defaults write com.apple.finder ShowRecentTags -bool false' \
-        'Do not show recent tags'
+    #todo execute 'defaults write com.apple.finder ShowRecentTags -bool false' \
+    #    'Do not show recent tags'
 
     execute 'defaults write NSGlobalDomain AppleShowAllExtensions -bool true' \
         'Show all filename extensions'
 
-    execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist' \
-        'Set icon size'
+    #execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist' \
+    #    'Set icon size'
 
-    execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 1" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 1" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 1" ~/Library/Preferences/com.apple.finder.plist' \
-        'Set icon grid spacing size'
+    #execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 1" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 1" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 1" ~/Library/Preferences/com.apple.finder.plist' \
+    #    'Set icon grid spacing size'
 
-    execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 13" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:textSize 13" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:textSize 13" ~/Library/Preferences/com.apple.finder.plist' \
-        'Set icon label text size'
+    #execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 13" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:textSize 13" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:textSize 13" ~/Library/Preferences/com.apple.finder.plist' \
+    #    'Set icon label text size'
 
-    execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist' \
-        'Set icon label position'
+    #execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist' \
+    #    'Set icon label position'
 
-    execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist' \
-        'Show item info'
+    #execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist' \
+    #    'Show item info'
 
-    execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy none" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy none" ~/Library/Preferences/com.apple.finder.plist &&
-             /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy none" ~/Library/Preferences/com.apple.finder.plist' \
-        'Set sort method'
+    #execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy none" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy none" ~/Library/Preferences/com.apple.finder.plist &&
+    #         /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy none" ~/Library/Preferences/com.apple.finder.plist' \
+    #    'Set sort method'
 
 }
 
