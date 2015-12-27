@@ -8,6 +8,10 @@
 # Make vim the default editor
 export EDITOR='vim'
 
+# Make Sublime Text the default editor
+# see http://www.sublimetext.com/docs/3/osx_command_line.html
+#export EDITOR='subl -w'
+
 # Ignore commands that start with spaces and duplicates
 export HISTCONTROL=ignoreboth
 
